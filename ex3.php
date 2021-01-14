@@ -1,5 +1,15 @@
 <?php
-
+/* EXERCISE 3
+Copy the code of exercise 2 to here and delete everything related to cola.
+Make all properties private.
+Make all the other prints work without error.
+After fixing the errors. Change the color of Duvel to light instead of blond and
+also print this new color on the screen after all the other things that were already printed (to be sure that the color has changed).
+Create a new private method in the Beer class called beerInfo which returns "Hi i'm Duvel and have an alochol percentage of 8.5 and I have a light color."
+Make sure that you use the variables and not just this text line.
+Print this method on the screen on a new line.
+USE TYPEHINTING EVERYWHERE!
+*/
 declare(strict_types=1);
 class Beverage
 {
@@ -52,10 +62,10 @@ class Beer extends Beverage
 
 	public function __construct(string $color, float $price, string $temperature, string $name, float $alcoholpercentage)
 	{
-		$this->color       = $color;
-		$this->price       = $price;
+		$this->color = $color;
+		$this->price = $price;
 		$this->temperature = $temperature;
-		$this->name        = $name;
+		$this->name = $name;
 		$this->alcoholpercentage = $alcoholpercentage;
 	}
 
@@ -68,13 +78,10 @@ class Beer extends Beverage
 	{
 		return 'Hi, I\'m <b>' . $this->name . '</b> and have an alcohol percentage of <b>' . $this->alcoholpercentage . '%</b>. I\'m <b>' . $this->color . '</b> in color.</br>';
 	}
-
-
 	public function getName()
 	{
 		return $this->name;
 	}
-
 
 	public function setName($name)
 	{
@@ -83,10 +90,8 @@ class Beer extends Beverage
 		return $this;
 	}
 }
-
 $duvel = new Beer('blond', 3.50, 'cold', 'duvel', 8.5);
 $guldenDraak = new beer('redish', 4, 'cold', 'Gulden Draak', 10.5);
-
 // Duvel
 echo '<h3>Duvel</h3>';
 echo ($duvel->getInfo());
@@ -95,7 +100,6 @@ echo ($duvel->getInfo());
 echo ($duvel->beerInfo());
 echo ($duvel->getAlcoholPercentage());
 echo '</br>';
-
 // Gulden Draak Test
 echo '<h3>Gulden Draak</h3>';
 echo ($guldenDraak->getInfo());
@@ -107,3 +111,4 @@ $guldenDraak->setTemperature('hot');
 echo ($guldenDraak->getInfo());
 echo ($guldenDraak->beerInfo());
 echo ($guldenDraak->getAlcoholPercentage());
+?>
