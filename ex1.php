@@ -27,10 +27,10 @@ class Beverage
 
     public function getInfo(): string
     {
-        return "€ This beverage is a cola, it is $this->temperature and $this->color.";
+        return "€ This beverage is a cola, it is {$this->temperature} and {$this->color}.<br>";
     }
 }
-$cola = new Beverage('black', 2);
-echo $cola->price;
+$cola = new Beverage('black', 2,);//adding "warm , changes temp 
+echo $cola->price ;
 echo $cola->getInfo();
 ?>
